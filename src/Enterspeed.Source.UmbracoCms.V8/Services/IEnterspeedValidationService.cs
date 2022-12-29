@@ -1,7 +1,7 @@
-﻿using Enterspeed.Source.Sdk.Api.Models.Properties;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Enterspeed.Source.Sdk.Api.Models.Properties;
 
-namespace Enterspeed.Source.UmbracoCms.Services
+namespace Enterspeed.Source.UmbracoCms.V8.Services
 {
     public interface IEnterspeedValidationService
     {

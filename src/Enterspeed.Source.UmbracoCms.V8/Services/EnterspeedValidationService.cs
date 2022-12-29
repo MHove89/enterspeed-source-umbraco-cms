@@ -1,14 +1,14 @@
-﻿using Enterspeed.Source.Sdk.Api.Models.Properties;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Enterspeed.Source.Sdk.Api.Models.Properties;
+using Umbraco.Core.Logging;
 
-namespace Enterspeed.Source.UmbracoCms.Services
+namespace Enterspeed.Source.UmbracoCms.V8.Services
 {
     public class EnterspeedValidationService : IEnterspeedValidationService
     {
-        private readonly ILogger<EnterspeedValidationService> _logger;
+        private readonly ILogger _logger;
 
-        public EnterspeedValidationService(ILogger<EnterspeedValidationService> logger)
+        public EnterspeedValidationService(ILogger logger)
         {
             _logger = logger;
         }
@@ -17,7 +17,7 @@ namespace Enterspeed.Source.UmbracoCms.Services
         {
             if (property.Value == null)
             {
-                _logger.LogError($"You cannot assign null as a property on {property.Key}");
+                _logger.Error<EnterspeedValidationService>($"You cannot assign null as a property on {property.Key}");
             }
         }
 

@@ -50,7 +50,7 @@ namespace Enterspeed.Source.UmbracoCms.Services
 
             enterspeedProperties.Add(MetaData, CreateNodeMetaData(content, culture));
 
-            _enterspeedValidationService.LogValidationErrors(enterspeedProperties.Values);
+            _enterspeedValidationService.LogValidationErrors(enterspeedProperties);
 
             return enterspeedProperties;
         }
@@ -119,8 +119,6 @@ namespace Enterspeed.Source.UmbracoCms.Services
                 output.Add("culture", new StringEnterspeedProperty(culture));
             }
 
-            _enterspeedValidationService.LogValidationErrors(output.Values);
-
             return output;
         }
 
@@ -146,7 +144,7 @@ namespace Enterspeed.Source.UmbracoCms.Services
 
             enterspeedProperties.Add(MetaData, CreateMediaMetaProperties(media, publishedMedia));
 
-            _enterspeedValidationService.LogValidationErrors(output.Values);
+            _enterspeedValidationService.LogValidationErrors(enterspeedProperties);
 
             return enterspeedProperties;
         }
