@@ -13,7 +13,7 @@ using Umbraco.Cms.Infrastructure.Scoping;
 
 namespace Enterspeed.Source.UmbracoCms.Components
 {
-    public class EnterspeedJobsComponent : IComponent
+    public class EnterspeedJobsComponent : IComponent 
     {
         private readonly IScopeProvider _scopeProvider;
         private readonly IKeyValueService _keyValueService;
