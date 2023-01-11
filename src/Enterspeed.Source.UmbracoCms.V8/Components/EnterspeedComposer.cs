@@ -27,7 +27,7 @@ using Umbraco.Core.Mapping;
 namespace Enterspeed.Source.UmbracoCms.V8.Components
 {
     [RuntimeLevel(MinLevel = RuntimeLevel.Run)]
-    public class EnterspeedComposer : IUserComposer
+    public class EnterspeedComposer : IUserComposer 
     {
         public void Compose(Composition composition)
         {
